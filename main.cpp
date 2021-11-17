@@ -9,7 +9,7 @@ void read_record()
     fstream fin;
 
     // Open an existing file
-    fin.open("D:\\luka\\c\\untitled\\Georgia_Country_RF.csv", ios::in);
+    fin.open("../Georgia_Country_RF.csv", ios::in);
     /*if(!fin.is_open())
     {
         std::cout << "File not found!\n";
