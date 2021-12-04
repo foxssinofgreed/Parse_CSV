@@ -17,8 +17,8 @@ void read_record() {
     // Open an existing file
     fin.open("/home/fox/CLionProjects/Parse_CSV/Georgia_Country_RF.csv", ios::in);
     if(fin.is_open()) {
-        /*cout << "Enter Personal Number: ";
-    cin >> personal_number;*/
+        cout << "Enter Personal Number: ";
+        cin >> personal_number;
         cout << "Enter Name: ";
         cin >> name;
         cout << "Enter Last Name: ";
@@ -47,7 +47,7 @@ void read_record() {
             row.push_back(token);
             temp.erase(0, pos + delimiter.length());
         }
-        if(/*row[0] == personal_number*/ row[2] == name && row[1] == lastname && row[3] == father /*&& row[4] == date && row[7] == sex*/) {
+        if(/*row[0] == personal_number &&*/ row[2] == name && row[1] == lastname /*&& row[3] == father*/ /*&& row[4] == date && row[7] == sex*/) {
             cout << "ID: " << "\x1B[32m" << id << "\033[0m\t\t, ";
             cout << "Personal Number: " << "\x1B[31m"  << row[0] << "\033[0m\t\t, ";
             cout << "Name: " << "\x1B[93m"  << row[2] << "\033[0m\t\t, ";
@@ -58,6 +58,20 @@ void read_record() {
             if(row[7] == "1") {
                 cout << "Region: " << "\x1B[35m"  << "Male" << "\033[0m\t\t" << endl;
             } else cout << "Region: " << "\x1B[93m"  << "Female" << "\033[0m\t\t" << endl;
+
+        /* Use this for 1 person
+        if(row[0] == personal_number && row[2] == name && row[1] == lastname *//*&& row[3] == father*//* *//*&& row[4] == date && row[7] == sex*//*) {
+            cout << "ID: " << "\x1B[32m" << id << "\033[0m\t\t " << endl;
+            cout << "Personal Number: " << "\x1B[31m"  << row[0] << "\033[0m\t\t " << endl;
+            cout << "Name: " << "\x1B[93m"  << row[2] << "\033[0m\t\t " << endl;
+            cout << "Last Name: " << "\x1B[34m"  << row[1] << "\033[0m\t\t " << endl;
+            cout << "Father's Name: " << "\x1B[35m"  << row[3] << "\033[0m\t\t " << endl;
+            cout << "Birth Date: " << "\x1B[36m"  << row[4] << "\033[0m\t\t " << endl;
+            cout << "Address: " << "\x1B[37m"  << row[9] << "\033[0m\t\t " << endl;
+            if(row[7] == "1") {
+                cout << "Region: " << "\x1B[35m"  << "Male" << "\033[0m\t\t" << endl;
+            } else cout << "Region: " << "\x1B[93m"  << "Female" << "\033[0m\t\t" << endl;
+        */
 
             //check++;
             //cout << fullRow[id - 1] << endl;
